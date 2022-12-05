@@ -156,6 +156,8 @@ namespace Assignment1
         {
             driver.FindElement(By.Id("openwindow")).Click();
             Thread.Sleep(1000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
 
         }
@@ -164,6 +166,8 @@ namespace Assignment1
         {
             driver.FindElement(By.Id("opentab")).Click();
             Thread.Sleep(1000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
 
         }
